@@ -21,6 +21,7 @@ html, body {
   background-size: 100% 25px;
   border: 1px dotted $ink-color;
   border-radius: 8px;
+  overflow-x: hidden;
 }
 
 /* Main container */
@@ -28,10 +29,10 @@ html, body {
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
-  width: 100vw;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: $spacing-sm;
   overflow-x: hidden;
   font-family: $font-cursive;
   line-height: 1.75;
