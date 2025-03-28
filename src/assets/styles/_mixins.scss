@@ -31,7 +31,7 @@
 /* Links */
 @mixin scrapbook-link {
   color: $ink-color;
-  text-decoration: none;
+  
   background-color: color.adjust($accent-color, $lightness: 15%);
   border-radius: 10px;
   
