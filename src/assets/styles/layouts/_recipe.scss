@@ -1,0 +1,121 @@
+@use 'sass:color';
+
+.pan-recipe {
+  @include section-base;
+  @include punch-holes;
+  @include scrapbook-shadow;
+  padding-bottom: 5rem;
+}
+
+.pan-recipe__title {
+  @include section-title(3rem);
+}
+
+.pan-recipe__text {
+  font-size: 3rem;
+}
+
+.pan-recipe__link {
+  @include scrapbook-link;
+}
+
+/* Steps */
+.pan-recipe__steps {
+  @include scrapbook-grid-list;
+  font-size: 1.5rem;
+  counter-reset: step;
+}
+
+.pan-recipe__step {
+  @include scrapbook-list-item;
+  line-height: 1.5;
+  
+  &::before {
+    position: relative;
+    margin-right: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: $accent-color;
+    content: counter(step) ".";
+    counter-increment: step;
+    
+  }
+}
+
+/* Img wrapper */
+.pan-recipe__img-wrapper {
+  @include scrapbook-img-frame(75%, 2deg);
+  margin-top: $spacing-lg;
+  margin-left: $spacing-lg;
+}
+
+/* Images inside steps */
+.pan-recipe__img {
+  @include scrapbook-img;
+
+
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 300px; 
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: 350px; 
+  }
+}
+
+/* Recommended places list */
+
+.pan-recipe__list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  padding: 0;
+  margin-top: $spacing-lg;
+  list-style: none;
+}
+
+.pan-recipe__item {
+  position: relative;
+  padding-left: 2.5rem;
+  font-size: 2rem;
+
+  &::before {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    content: "";
+    background-image: url("../images/bono64.png");
+    background-size: contain;
+  }
+}
+
+
+/* Map wrapper */
+.pan-map-wrapper {
+  @include scrapbook-img-frame;
+  margin-top: $spacing-lg;
+  margin-left: $spacing-lg;
+}
+
+/* Map */
+.pan-map {
+  width: 98%;
+  height: 300px;
+  margin: $spacing-lg auto 0;
+  border: 1px dotted $accent-color;
+  border-radius: 6px;
+  box-shadow: 1px 1px 0 color.adjust($ink-color, $lightness: 5%);
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 500px;
+    border: 2px dotted $accent-color;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: 800px;
+    border: 3px dotted $accent-color;
+  }
+}

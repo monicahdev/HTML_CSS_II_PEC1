@@ -1,0 +1,49 @@
+@use 'sass:color';
+
+.pan-presentation {
+  @include section-base;
+  @include punch-holes;
+  @include scrapbook-shadow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5rem;
+
+  .pan-presentation__title {
+    @include section-title(3rem);
+  }
+}
+
+/* Img wrapper */
+.pan-presentation__img-wrapper {
+  @include scrapbook-img-frame(75%, 2deg);
+}
+
+.pan-presentation__img {
+  @include scrapbook-img;
+}
+
+.pan-presentation__text {
+  @include section-text;
+  margin-bottom: $spacing-lg;
+  font-size: 2.5rem;
+}
+
+.pan-presentation__quote {
+  position: relative;
+  max-width: 95%;
+  margin-bottom: $spacing-sm;
+  font-size: 3rem;
+  text-align: center;
+  
+}
+
+.pan-presentation__cite {
+  max-width: 50%;
+  font-size: 1.25rem;
+  text-align: center; 
+}
+
+.pan-presentation__link {
+ @include scrapbook-link;
+}

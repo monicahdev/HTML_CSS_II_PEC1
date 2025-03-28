@@ -2,6 +2,10 @@
   "plugins": {
     "posthtml-include": {
       "root": "./src"
+    },
+    "posthtml-img-autosize": {
+      "root": "./src"
     }
+    
   }
 }

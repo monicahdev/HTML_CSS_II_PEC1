@@ -5,21 +5,311 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Pandebono</title>
+    <meta name="description"
+        content="Conoce el pandebono">
+    <link rel="icon" type="images/png" sizes="32x32" href="./assets/images/pandebono32.png"> 
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
+  <body class="pan-body" id="container">
+    <div class="pan-container">
+      <include src="./views/header.html"></include>
+      <h1 class="pan-title">EL PANDEBONO</h1>
+      <section class="pan-presentation" id="presentation">
+        <h2 class="pan-presentation__title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">¿Qué es el pandebono?</h2>
+        <p class="pan-presentation__text">
+          El mejor pan del 2025... que no es un pan. Según el portal TasteAtlas, el pandebono fue catalogado como uno de los <a class="pan-presentation__link" href="https://www.tasteatlas.com/best/foods-by-category"> mejores panes del año 24/25</a>.
+        </p>
+        <p class="pan-presentation__text">
+          A pesar de que no es un pan, pues no se prepara con harina de trigo, este amasijo es originario de la región del Valle del Cauca, Colombia. Hay <a class="pan-presentation__link" href="https://es.wikipedia.org/wiki/Pandebono#:~:text=El%20pandebono%20es%20un%20amasijo,no%20lo%20es%20en%20realidad.">diversas historias en torno a su origen</a>. Se dice que fue creado por Genoveva, la cocinera de la hacienda rural 'El Bono' para los trabajadores del lugar.
+          También se dice un panadero italiano vendía "pan del buono" en las calles de Santiago de Cali, la capital de esta región, el cual terminó conociéndose como pandebono.
+          Otros afirman que los ingenios de caña de azúcar daban a sus trabajadores bonos, o billetes, para reclamar su merienda de pan y agua, y estos lo llamaban 'pan del bono'.
+          No obstante, el primer registro escrito que existe es de 1884.
+          <blockquote class="pan-presentation__quote">"El único comestible que se encuentra en las escasas viviendas junto al camino Dagua, es una especie de torta de maíz amasada con huevos, llamada por los arrieros Pan de Bono"</blockquote>  
+          <cite class="pan-presentation__cite"><a class="pan-presentation__link" href="https://archive.org/details/americapintoresca00wien/page/704/mode/2up">Getty Research Institute, Charles; Crevaux, Jules; Charnay, Désiré; André, Edouard (1884). América pintoresca; descripcion de viajes al nuevo continente por los mas modernos exploradores. Barcelona, Montaner y Simon. p. p704.</a></cite>
+        </p>
+        <p class="pan-presentation__text"> Sin importar su origen, esta es una de las meriendas preferidas por muchos colombianos. Es simple, saciante y sápido. 
+        </p>
+        <div class="pan-presentation__img-wrapper"> <img class="pan-presentation__img" src="./assets/images/canasta.jpg" alt="Fotografía de una canasta de pandebonos recién horneada."></div>
+      </section>
+      <section class="pan-ingredients" id="ingredients">
+        <h2 class="pan-ingredients__title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">Ingredientes</h2>
+        <p class="pan-ingredients__text">
+          Estos son los ingredientes del pandebono. 
+        </p>
+        <ul class="pan-ingredients__list">
+            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/yuca128.png" alt="Ícono de una yuca partida a la mitad" width="auto" height="auto"></div> Almidón de yuca - 130 gramos</li>
+            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/maiz128.png" alt="Ícono de una caja de fécula de maíz" width="auto" height="auto"></div> Fécula de maíz - 32 gramos</li>
+            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/queso128.png" alt="Ícono de un rallador de queso y una cuña de queso" width="auto" height="auto"></div> Queso costeño ** - 250 gramos</li>
+            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/huevo128.png" alt="Ícono de un huevo" width="auto" height="auto"></div> Huevo - 1 grande</li>
+            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/mantequilla128.png" alt="Ícono de un barra de mantequilla cortada en dos" width="auto" height="auto"></div> Mantequilla - 2 cucharadas</li>
+            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/leche128.png" alt="Ícono de una caja de leche con una vaca dibujada" width="auto" height="auto"></div> Leche - 45 mililítros</li>
+            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/azucar128.png" alt="Ícono de una bolsa de azúcar, que pone 'SUGAR' (azúcar en inglés)" width="auto" height="auto"></div> Azúcar - 24 gramos</li>
+            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/polvo-hornear128.png" alt="Ícono de polvo de hornear saliendo de una bolsa" width="auto" height="auto"></div> Polvo de hornear - 1 gramo</li>            
+        </ul>
+        <p class="pan-ingredients__footnote"> 
+          **En España lo consigues como queso 'latino'.
+        </p>
+    </section>
+    <section class="pan-recipe" id="recipe">
+      <h2 class="pan-recipe__title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">Receta</h2>
+      <p class="pan-recipe__text">
+        La receta es bastante sencilla. Necesitarás un horno, un tazón para mezclar, un rallador de queso, una bandeja de hornear. Esta es solo <a class="pan-recipe__link" href="https://www.eltiempo.com/cultura/pandebono-conozca-esta-receta-tipica-del-valle-749132">una de las miles de recetas</a> que hay.
       </p>
+      <ol class="pan-recipe__steps">
+          <li class="pan-recipe__step">Precalienta el horno a 250° C. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/horno.jpg" alt="Fotografía de un horno con la puerta abierta."></div></li>
+          <li class="pan-recipe__step">Ralla el queso costeño. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/rallado.jpg" alt="Fotografía de frasco de vidrio lleno de queso rallado."></div></li>
+          <li class="pan-recipe__step">En un tazón aparte integra todos los ingredientes secos: el almidón de yuca, la harina de maíz, el azúcar y el polvo de hornear. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/secos.jpg" alt="Fotografía de un tazón de acero inoxidable que contiene harina. Dentro hay una cuchara medidora de acero inoxidable de 125ml a medio llenar."></div></li>
+          <li class="pan-recipe__step">Incorpora el queso, el huevo y la mantequilla y amasa. Añade la leche poco a poco hasta que la masa quede firme. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/tazon.jpg" alt="Fotografía de las manos de una persona amasando una mezcla de harina en un tazón de vidrio sobre una superficie de madera. Junto al tazón hay un rodillo de madera."></div></li>
+          <li class="pan-recipe__step">Haz bolas pequeñas, de unos 5cm, y ponlas en la bandeja para hornear. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/bollos.jpg" alt="Fotografía de una persona poniendo una bola de masa de 5cm en una bandeja para hornear vacía forrada con papel de hornear."></div></li>
+          <li class="pan-recipe__step">Hornea durante 25 minutos o hasta que los pandebonos estén dorados. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/bandeja.jpg" alt="Fotografía de una persona poniendo una bola de masa de 5cm en una bandeja para hornear llena de bolas de masa forrada con papel de hornear."></div></li>
+          <li class="pan-recipe__step">Disfruta con tu bedida favorita. ¿Qué tal un café? <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/pandebono.jpg" alt="Una mano sostiene un amasijo horneado ya mordisqueado hecho de masa de almidón de yuca y queso."></div></li>
+      </ol>
+      
+      <p class="pan-recipe__text">
+        Si lo tuyo no es jugar al cocinero, estos son un par de lugares que recomiendo en Bogotá, Colombia.
+      </p>
+      <ul class="pan-recipe__list">
+        <li class="pan-recipe__item">Pastelería Florida (un clásico) - Carrera 7 # 21-46</li>
+        <li class="pan-recipe__item">Café y pandebono. Antojos vallunos (mi favorito) - Carrera 7 # 21-20</li>
+        <li class="pan-recipe__item">La Estación del Pandebono (ahora se llama Metro Pandebono) - Carrera 7 #62-67</li>
+      </ul>
+      <div class="pan-map-wrapper"><div class="pan-map" id="map"></div></div>   
+    </section>
+    <section class="pan-attributions" id="attributions">
+      <h2 class="pan-attributions__title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">Atribuciones</h2>
+      <p class="pan-attributions__text">En esta página encuentras todos los enlaces a los recursos utilizados para la creación de este sitio web. Algunos de estos recursos tienen que ser atribuidos. Se ha hecho la atribución* tal cual se especifica en cada caso (en los que aplique).</p>
+      <div class="pan-attributions__table-wrapper">
+      <table class="pan-attributions__table">
+        <caption class="pan-attributions__table-caption">Documentación de los recursos utilizados</caption>  
+        <thead class="pan-attributions__table-head">
+          <tr class="pan-attributions__table-row">
+            <th class="pan-attributions__table-cell" scope="col">Tipo de recurso</th>
+            <th class="pan-attributions__table-cell" scope="col">Descripción</th>
+            <th class="pan-attributions__table-cell" scope="col">Utilizada en</th>
+            <th class="pan-attributions__table-cell" scope="col">Autor</th>
+            <th class="pan-attributions__table-cell" scope="col">Atribución*</th>
+            <th class="pan-attributions__table-cell" scope="col">Enlace</th>
+          </tr>
+        </thead>
+        <tbody class="pan-attributions__table-body">  
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Fav icon</td>
+            <td class="pan-attributions__table-cell">Todo el sitio web</td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/pan-de-bono" title="pan de bono iconos">Pan de bono iconos creados por Freepik - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/pan-de-bono_10848277" target="_blank">https://www.flaticon.es/icono-gratis/pan-de-bono_10848277</a></td>
+          </tr>  
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Logo</td>
+            <td class="pan-attributions__table-cell">Logo del encabezado</td>
+            <td class="pan-attributions__table-cell">Todo el sitio web</td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/pan-de-bono" title="pan de bono iconos">Pan de bono iconos creados por Freepik - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/pan-de-bono_10848277" target="_blank">https://www.flaticon.es/icono-gratis/pan-de-bono_10848277</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Fotografía</td>
+            <td class="pan-attributions__table-cell">Fotografía de una canasta de pandebonos</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#presentation">presentación</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/@jessyka-marques-17123873">Jessyka Marques</a> (2023)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://www.pexels.com/license/">Uso gratuito</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/photo/basket-of-fresh-pandebono-on-a-table-18545412/" target="_blank">https://www.pexels.com/photo/basket-of-fresh-pandebono-on-a-table-18545412/</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Ícono de ingredientes de la receta</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#ingredients">ingredientes</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/yuca" title="yuca iconos">Yuca iconos creados por Flat Icons - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/yuca_4926128" target="_blank">https://www.flaticon.es/icono-gratis/yuca_4926128</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Ícono de ingredientes de la receta</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#ingredients">ingredientes</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/harina-de-maiz" title="harina de maíz iconos">Harina de maíz iconos creados por Aranagraphics - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/harina-de-maiz_7002921" target="_blank">https://www.flaticon.es/icono-gratis/harina-de-maiz_7002921</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Ícono de ingredientes de la receta</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#ingredients">ingredientes</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/queso-rallado" title="queso rallado iconos">Queso rallado iconos creados por Karyative - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/queso-rallado_16112195" target="_blank">https://www.flaticon.es/icono-gratis/queso-rallado_16112195</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Ícono de ingredientes de la receta</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#ingredients">ingredientes</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/huevo" title="huevo iconos">Huevo iconos creados por Those Icons - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/huevo_528166" target="_blank">https://www.flaticon.es/icono-gratis/huevo_528166</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Ícono de ingredientes de la receta</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#ingredients">ingredientes</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/mantequilla" title="mantequilla iconos">Mantequilla iconos creados por Freepik - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/mantequilla_3348105" target="_blank">https://www.flaticon.es/icono-gratis/mantequilla_3348105</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Ícono de ingredientes de la receta</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#ingredients">ingredientes</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/leche" title="leche iconos">Leche iconos creados por tulpahn - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/leche_5125422" target="_blank">https://www.flaticon.es/icono-gratis/leche_5125422</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Ícono de ingredientes de la receta</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#ingredients">ingredientes</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/azucar" title="azúcar iconos">Azúcar iconos creados por juicy_fish - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/azucar_5835935" target="_blank">https://www.flaticon.es/icono-gratis/azucar_5835935</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Ícono de ingredientes de la receta</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#ingredients">ingredientes</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/fermentar" title="fermentar iconos">Fermentar iconos creados por Nadiinko - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/bolsa_13945920" target="_blank">https://www.flaticon.es/icono-gratis/bolsa_13945920</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Fotografía</td>
+            <td class="pan-attributions__table-cell">Fotografía de un horno</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/@cottonbro/">Marta Dzedyshko</a> (2020)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://www.pexels.com/license/">Uso gratuito</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/photo/white-top-mount-refrigerator-beside-white-top-mount-refrigerator-3992205/" target="_blank">https://www.pexels.com/photo/white-top-mount-refrigerator-beside-white-top-mount-refrigerator-3992205/</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row"> 
+            <td class="pan-attributions__table-cell">Fotografía</td>
+            <td class="pan-attributions__table-cell">Fotografía de queso rallado</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/@marta-dzedyshko-1042863/">cottonbro studio</a> (2020)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://www.pexels.com/license/">Uso gratuito</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/photo/powdered-milk-on-glass-drink-6341417/" target="_blank">https://www.pexels.com/photo/powdered-milk-on-glass-drink-6341417/</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Fotografía</td>
+            <td class="pan-attributions__table-cell">Fotografía de tazón con harina</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/@klaus-nielsen/">Klaus Nielsen</a> (2020)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://www.pexels.com/license/">Uso gratuito</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/photo/bowl-with-flour-and-measuring-cup-in-kitchen-6287323/" target="_blank">https://www.pexels.com/photo/bowl-with-flour-and-measuring-cup-in-kitchen-6287323/</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Fotografía</td>
+            <td class="pan-attributions__table-cell">Fotografía de amasado</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/@roman-odintsov/">Roman Odintsov</a> (2020)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://www.pexels.com/license/">Uso gratuito</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/photo/man-making-a-dough-5947522/" target="_blank">https://www.pexels.com/photo/man-making-a-dough-5947522/</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Fotografía</td>
+            <td class="pan-attributions__table-cell">Fotografía de una bola de masa en una bandeja</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/@felicity-tai/">Felicity Tai</a> (2021)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://www.pexels.com/license/">Uso gratuito</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/photo/a-person-placing-rounded-dough-over-baking-paper-7965974/" target="_blank">https://www.pexels.com/photo/a-person-placing-rounded-dough-over-baking-paper-7965974/</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Fotografía</td>
+            <td class="pan-attributions__table-cell">Fotografía de bolas de masa en una bandeja</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/@felicity-tai/">Felicity Tai</a> (2021)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://www.pexels.com/license/">Uso gratuito</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.pexels.com/photo/hand-putting-pastry-on-pan-7965980/" target="_blank">https://www.pexels.com/photo/hand-putting-pastry-on-pan-7965980/</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Ícono de pandebonos</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/">Flaticon - Freepik</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/iconos-gratis/un-pan" title="un pan iconos">Un pan iconos creados por Freepik - Flaticon</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.flaticon.es/icono-gratis/pandebono_1938815" target="_blank">https://www.flaticon.es/icono-gratis/pandebono_1938815</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Dependencia de desarrollo</td>
+            <td class="pan-attributions__table-cell">Dependencia leaflet, versión 1.9.4. Mapa incrustado con ubicaciones</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://github.com/mourner">Volodymyr Agafonkin</a> (2010-2024)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://github.com/Leaflet/Leaflet/blob/main/LICENSE">BSD 2-Clause License</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://leafletjs.com/download.html" target="_blank">https://leafletjs.com/download.html</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Coordenadas de geolocalización</td>
+            <td class="pan-attributions__table-cell">Coordenadas en grados decimales de Pastelería Florida</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.google.es/maps/">Google Maps</a> (2025)</td>
+            <td class="pan-attributions__table-cell">N/A. Coordenadas obtenidas a través de Google Maps</td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://maps.app.goo.gl/B7f6vWfeZFedcacZ6" target="_blank">https://maps.app.goo.gl/B7f6vWfeZFedcacZ6</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Coordenadas de geolocalización</td>
+            <td class="pan-attributions__table-cell">Coordenadas en grados decimales de Cafe y pandebono antojos vallunos</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.google.es/maps/">Google Maps</a> (2025)</td>
+            <td class="pan-attributions__table-cell">N/A. Coordenadas obtenidas a través de Google Maps</td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://maps.app.goo.gl/2hVZmfdmovvgNYgA7" target="_blank">https://maps.app.goo.gl/2hVZmfdmovvgNYgA7</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Coordenadas de geolocalización</td>
+            <td class="pan-attributions__table-cell">Coordenadas en grados decimales de Metro Pandebono</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.google.es/maps/">Google Maps</a> (2025)</td>
+            <td class="pan-attributions__table-cell">N/A. Coordenadas obtenidas a través de Google Maps</td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://maps.app.goo.gl/JMygDezWsVzcWSMj8" target="_blank">https://maps.app.goo.gl/JMygDezWsVzcWSMj8</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Ícono</td>
+            <td class="pan-attributions__table-cell">Marker del mapa</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.freepik.com/">Freepik</a> (2019)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA 2.0</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://commons.wikimedia.org/wiki/File:Marker_location.png" target="_blank">https://commons.wikimedia.org/wiki/File:Marker_location.png</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Dependencia</td>
+            <td class="pan-attributions__table-cell">Dependencia Animation on Scroll (AOS), versión 2.3.4. Animaciones para los títulos de cada sección.</td>
+            <td class="pan-attributions__table-cell">Todas las secciones</td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://github.com/michalsnik">Michal Snik</a> (2015)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://github.com/michalsnik/aos/blob/next/LICENSE">MIT</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://michalsnik.github.io/aos/" target="_blank">https://michalsnik.github.io/aos/</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Dependencia</td>
+            <td class="pan-attributions__table-cell">Dependencia posthtml-img-autosize</td>
+            <td class="pan-attributions__table-cell">Todas las secciones</td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.npmjs.com/~scrum">Ivan Demidov y otros</a> (2020)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://github.com/posthtml/posthtml-img-autosize/blob/master/LICENSE.txt">MIT</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://www.npmjs.com/package/posthtml-img-autosize" target="_blank">https://www.npmjs.com/package/posthtml-img-autosize</a></td>
+          </tr>
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell">Dependencia de desarrollo</td>
+            <td class="pan-attributions__table-cell">Dependencia Rough.js</td>
+            <td class="pan-attributions__table-cell">Sección de <a class="pan-attributions__table-link" href="#recipe">receta</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://github.com/rough-stuff">Preet Shihn y otros</a> (2020)</td>
+            <td class="pan-attributions__table-cell">Licencia de uso <a class="pan-attributions__table-link" href="https://github.com/rough-stuff/rough/blob/master/LICENSE">MIT</a></td>
+            <td class="pan-attributions__table-cell"><a class="pan-attributions__table-link" href="https://roughjs.com/" target="_blank">https://roughjs.com/</a></td>
+          </tr>
+        </tbody>
+        <tfoot class="pan-attributions__table-foot">
+          <tr class="pan-attributions__table-row">
+            <td class="pan-attributions__table-cell" colspan="6">*Las atribuciones son copiadas y pegadas textualmente como exigen los recursos que requieren licencia de atribución. El resto de imágenes y recursos tienen una licencia de uso Creative Commons, de uso gratuito o MIT.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
     </div>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->

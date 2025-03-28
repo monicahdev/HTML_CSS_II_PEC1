@@ -1,0 +1,206 @@
+@use 'sass:color';
+
+/* Section main styles */
+
+@mixin section-base {
+  position: relative;
+  padding: $spacing-sm;
+  margin-top: $spacing-lg;
+  margin-right: $spacing-sm;
+  margin-left: $spacing-sm;
+  border: 2px dashed $ink-color;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 $ink-color;
+}
+
+/* Section headers */
+@mixin section-title($size: 3rem) {
+  margin-bottom: $spacing-md;
+  font-size: $size;
+  font-weight: bold;
+  color: $accent-color;
+  text-align: center;
+}
+
+/* Section paragraphs */
+@mixin section-text($size: 2rem) {
+  margin-bottom: $spacing-sm;
+  font-size: $size;
+}
+
+/* Links */
+@mixin scrapbook-link {
+  color: $ink-color;
+  text-decoration: none;
+  background-color: color.adjust($accent-color, $lightness: 15%);
+  border-radius: 10px;
+  
+
+  &:hover {
+    color: color.adjust($accent-color, $lightness: -20%);
+    background-color: $ink-color;
+  }
+}
+
+/* Punch holes on top of each 'page' */
+@mixin punch-holes {
+  &::before {
+    position: absolute;
+    top: $spacing-md;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: $spacing-md;
+    content: "";
+    background-image: radial-gradient($accent-color 2px, transparent 10px);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: $spacing-lg;
+    
+    
+  }
+}
+
+/* Page shadow */
+@mixin scrapbook-shadow($deg: -1deg) {
+  box-shadow: 2px 2px 0 rgba($ink-color, 0.4);
+}
+
+/* Grid for list elements */
+@mixin scrapbook-grid-list($gap: $spacing-lg, $md-columns: 2, $lg-columns: 3) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem 2rem;
+  padding: 0;
+  margin-top: 2rem;
+  list-style-type: none;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat($md-columns, 1fr);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat($lg-columns, 1fr);
+  }
+}
+
+/* Items in list elements */
+@mixin scrapbook-list-item($font-size: 2rem) {
+  position: relative;
+  font-size: $font-size;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: rotate(-1deg) scale(1.02);
+  }
+
+  &::before {
+    position: absolute;
+    top: $spacing-sm;
+    left: $spacing-sm;
+    font-size: 1.2rem;
+    color: $accent-color;
+    content: "";
+  }
+}
+
+/* Image frame */
+@mixin scrapbook-img-frame($max-width: 75%, $rotation: 2deg) {
+  position: relative;
+  max-width: $max-width;
+  margin-bottom: $spacing-lg;
+  border: 20px solid $paper-color;
+  border-radius: 0;
+  box-shadow: 5px 5px 5px 2px $ink-color;
+  transform: rotate($rotation);
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 30px;
+    content: "";
+    background: $tape-color;
+    border: 1px dotted $ink-color;
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px rgba($ink-color, 0.2);
+  }
+
+  &::before {
+    top: -11px;
+    left: -40px;
+    transform: rotate(-40deg);
+  }
+
+  &::after {
+    right: -50px;
+    bottom: -5px;
+    transform: rotate(-40deg);
+  }
+}
+
+/* Image styles */
+@mixin scrapbook-img {
+  width: 100%;
+  margin-bottom: $spacing-md;
+  border: 1px dotted $ink-color;
+  border-radius: 20px;
+}
+
+/* Sticker style */
+@mixin scrapbook-sticker($size: 100px) {
+  width: $size;
+  height: $size;
+  padding: 8px;
+  object-fit: cover;
+  background: $paper-color;
+  border: 0.2px dotted $paper-color;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 rgba($ink-color, 0.4);
+  transform: rotate(-5deg);
+}
+
+/* Footer frame */
+@mixin scrapbook-footer-frame {
+  position: relative;
+  width: 92vw;
+  margin: 0 auto;
+  margin-bottom: $spacing-lg;
+  border: 20px solid $paper-color;
+  box-shadow: 5px 5px 5px 2px $ink-color;
+  transform: rotate(2deg);
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 80vw;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: 60vw;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 30px;
+    content: "";
+    background: $tape-color;
+    border: 1px dotted $ink-color;
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px rgba($ink-color, 0.2);
+  }
+
+  &::before {
+    top: -11px;
+    left: -40px;
+    transform: rotate(-40deg);
+  }
+
+  &::after {
+    right: -75px;
+    bottom: -30px;
+    transform: rotate(-40deg);
+  }
+}

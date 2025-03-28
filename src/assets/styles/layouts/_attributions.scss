@@ -1,0 +1,97 @@
+@use 'sass:color';
+
+.pan-attributions {
+  @include section-base;
+  @include punch-holes;
+  @include scrapbook-shadow;
+  padding: $spacing-md;
+  font-size: 3rem;
+
+  .pan-attributions__title {
+    @include section-title(3rem);
+  }
+}
+
+  .pan-attributions__table-wrapper {
+    width: 99%;
+    max-width: 1000px;
+    margin: $spacing-md auto;
+    overflow-x: auto;
+    border: 1px dotted $accent-color;
+  }
+
+  .pan-attributions__table {
+    width: 100%;
+    font-family: $font-secondary;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color: $paper-color;
+
+    .pan-attributions__table-caption {
+      padding: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: $accent-color;
+      border-top: 1px solid $accent-color;
+    }
+
+    .pan-attributions__table-cell,
+    .pan-attributions__table-head {
+      padding: 0.5rem;
+      font-size: 1.5rem;  
+      vertical-align: bottom;
+      text-align: left;
+      border: 0.1px dotted $ink-color;
+    }
+
+    .pan-attributions__table-row {
+      border-top: 1px solid $accent-color;
+      border-bottom: 1px solid $accent-color;
+    }
+
+    // row odd
+    .pan-attributions__table-row:nth-child(odd) {
+      color: $ink-color;
+      background-color: $paper-color;
+    }
+
+    // row even
+    .pan-attributions__table-row:nth-child(even) {
+      color: $paper-color;
+      background-color: $accent-color;
+    }
+  }
+
+  // links in odd rows
+  .pan-attributions__table-link {
+    padding-bottom: 2px;
+    color: $ink-color;
+    text-decoration: none;
+
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  // links in even rows
+  .pan-attributions__table-row:nth-child(even) .pan-attributions__table-link {
+    padding-bottom: 2px;
+    color: $paper-color;
+    text-decoration: none;
+    
+
+    &:hover {
+      color: $ink-color;
+    }
+  }
+
+  .pan-attributions__table-foot {
+    border-bottom: 1px solid $accent-color;
+
+    .pan-attributions__table-cell {
+      padding: $spacing-sm;
+      font-size: 1.25rem;
+      text-align: left;
+    }
+  }
