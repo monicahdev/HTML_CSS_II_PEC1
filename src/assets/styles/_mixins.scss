@@ -31,7 +31,6 @@
 /* Links */
 @mixin scrapbook-link {
   color: $ink-color;
-  
   background-color: color.adjust($accent-color, $lightness: 15%);
   border-radius: 10px;
   
@@ -55,16 +54,12 @@
     background-image: radial-gradient($accent-color 2px, transparent 10px);
     background-repeat: repeat-x;
     background-position: center;
-    background-size: $spacing-lg;
-    
-    
+    background-size: $spacing-lg;    
   }
 }
 
 /* Page shadow */
-@mixin scrapbook-shadow($deg: -1deg) {
-  box-shadow: 2px 2px 0 rgba($ink-color, 0.4);
-}
+@mixin scrapbook-shadow($deg: -1deg) { box-shadow: 2px 2px 0 rgba($ink-color, 0.4); }
 
 /* Grid for list elements */
 @mixin scrapbook-grid-list($gap: $spacing-lg, $md-columns: 2, $lg-columns: 3) {

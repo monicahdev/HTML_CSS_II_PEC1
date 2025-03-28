@@ -1,8 +1,9 @@
-// Function to adjust opacity of colors
+/* Lighten color */
 @function lighten-color($color, $percent) {
   @return color.adjust($color, $lightness: $amount);
 }
 
+/* Darken color */
 @function darken-color($color, $percent) {
   @return color.adjust($color, $lightness: - $amount);
 }

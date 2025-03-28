@@ -21,7 +21,7 @@ import rough from 'roughjs/bundled/rough.esm.js';
  * Write any other JavaScript below
  */
 
-/*Config AOS*/
+/* Config AOS */
 document.addEventListener('DOMContentLoaded', () => {
   if (document.body.id === 'container') {
       AOS.init();
@@ -62,7 +62,7 @@ if (document.getElementById("map")) {
 });
 }
 
-// 
+/* Manual tracing around grid elements */
 
 document.querySelectorAll('.pan-ingredients__item').forEach((el) => {
   /* Create an SVG DOM element */
@@ -73,7 +73,7 @@ document.querySelectorAll('.pan-ingredients__item').forEach((el) => {
   svgEl.style.top = 0;
   svgEl.style.left = 0;
   svgEl.style.pointerEvents = "none";
-  svgEl.style.zIndex = "0";
+  svgEl.style.zIndex = "1";
 
   /* Create a 'rough SVG' wrapper with SVG element */
   const rc = rough.svg(svgEl);

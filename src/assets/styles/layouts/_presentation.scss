@@ -9,19 +9,15 @@
   align-items: center;
   padding-bottom: 5rem;
 
-  .pan-presentation__title {
-    @include section-title(3rem);
+  .pan-presentation__title { 
+    @include section-title(3rem); 
   }
 }
 
 /* Img wrapper */
-.pan-presentation__img-wrapper {
-  @include scrapbook-img-frame(75%, 2deg);
-}
+.pan-presentation__img-wrapper { @include scrapbook-img-frame(75%, 2deg); }
 
-.pan-presentation__img {
-  @include scrapbook-img;
-}
+.pan-presentation__img { @include scrapbook-img; }
 
 .pan-presentation__text {
   @include section-text;
@@ -35,7 +31,6 @@
   margin-bottom: $spacing-sm;
   font-size: 3rem;
   text-align: center;
-  
 }
 
 .pan-presentation__cite {
@@ -44,6 +39,4 @@
   text-align: center; 
 }
 
-.pan-presentation__link {
- @include scrapbook-link;
-}
+.pan-presentation__link { @include scrapbook-link; }

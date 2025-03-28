@@ -7,8 +7,8 @@
   padding: $spacing-md;
   font-size: 3rem;
 
-  .pan-attributions__title {
-    @include section-title(3rem);
+  .pan-attributions__title { 
+    @include section-title(3rem); 
   }
 }
 
@@ -69,8 +69,8 @@
     text-decoration: none;
 
 
-    &:hover {
-      color: $accent-color;
+    &:hover { 
+      color: $accent-color; 
     }
   }
 
@@ -81,8 +81,8 @@
     text-decoration: none;
     
 
-    &:hover {
-      color: $ink-color;
+    &:hover { 
+      color: $ink-color; 
     }
   }
 

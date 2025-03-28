@@ -7,27 +7,17 @@
   padding-bottom: 5rem;
 }
 
-.pan-ingredients__title {
-  @include section-title(3rem);
-}
+.pan-ingredients__title { @include section-title(3rem); }
 
-.pan-ingredients__text {
-  font-size: 3rem;
-}
+.pan-ingredients__text { font-size: 3rem; }
 
 .pan-ingredients__footnote {
   margin-top: 5rem;
   font-size: 1.8rem;
 }
 
-.pan-ingredients__list {
-  @include scrapbook-grid-list;
-}
+.pan-ingredients__list { @include scrapbook-grid-list; }
 
-.pan-ingredients__item {
-  @include scrapbook-list-item;
-}
+.pan-ingredients__item { @include scrapbook-list-item; }
 
-.pan-ingredients__icon {
-  @include scrapbook-sticker(120px);
-}
+.pan-ingredients__icon { @include scrapbook-sticker(120px); }

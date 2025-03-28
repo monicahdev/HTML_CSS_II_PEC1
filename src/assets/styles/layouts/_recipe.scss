@@ -7,17 +7,11 @@
   padding-bottom: 5rem;
 }
 
-.pan-recipe__title {
-  @include section-title(3rem);
-}
+.pan-recipe__title { @include section-title(3rem); }
 
-.pan-recipe__text {
-  font-size: 3rem;
-}
+.pan-recipe__text { font-size: 3rem; }
 
-.pan-recipe__link {
-  @include scrapbook-link;
-}
+.pan-recipe__link { @include scrapbook-link; }
 
 /* Steps */
 .pan-recipe__steps {
@@ -50,10 +44,8 @@
 }
 
 /* Images inside steps */
-.pan-recipe__img {
+.pan-recipe__img { 
   @include scrapbook-img;
-
-
 
   @media (min-width: $breakpoint-md) {
     max-width: 300px; 
