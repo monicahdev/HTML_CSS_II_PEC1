@@ -29,7 +29,12 @@
         </p>
         <p class="pan-presentation__text"> Sin importar su origen, esta es una de las meriendas preferidas por muchos colombianos. Es simple, saciante y sápido. 
         </p>
-        <div class="pan-presentation__img-wrapper"> <img class="pan-presentation__img" src="./assets/images/canasta.jpg" alt="Fotografía de una canasta de pandebonos recién horneada."></div>
+        <div class="pan-presentation__img-wrapper">
+          <picture>
+            <source srcset="./assets/images/canasta.jpg?as=webp" type="image/webp">
+            <img class="pan-presentation__img" src="./assets/images/canasta.jpg" alt="Fotografía de una canasta de pandebonos recién horneada.">
+          </picture>
+        </div>
       </section>
       <section class="pan-ingredients" id="ingredients">
         <h2 class="pan-ingredients__title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">Ingredientes</h2>
@@ -37,14 +42,70 @@
           Estos son los ingredientes del pandebono. 
         </p>
         <ul class="pan-ingredients__list">
-            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/yuca128.png" alt="Ícono de una yuca partida a la mitad" width="auto" height="auto"></div> Almidón de yuca - 130 gramos</li>
-            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/maiz128.png" alt="Ícono de una caja de fécula de maíz" width="auto" height="auto"></div> Fécula de maíz - 32 gramos</li>
-            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/queso128.png" alt="Ícono de un rallador de queso y una cuña de queso" width="auto" height="auto"></div> Queso costeño ** - 250 gramos</li>
-            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/huevo128.png" alt="Ícono de un huevo" width="auto" height="auto"></div> Huevo - 1 grande</li>
-            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/mantequilla128.png" alt="Ícono de un barra de mantequilla cortada en dos" width="auto" height="auto"></div> Mantequilla - 2 cucharadas</li>
-            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/leche128.png" alt="Ícono de una caja de leche con una vaca dibujada" width="auto" height="auto"></div> Leche - 45 mililítros</li>
-            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/azucar128.png" alt="Ícono de una bolsa de azúcar, que pone 'SUGAR' (azúcar en inglés)" width="auto" height="auto"></div> Azúcar - 24 gramos</li>
-            <li class="pan-ingredients__item"><div class="pan-ingredients__icon-wrapper"><img class="pan-ingredients__icon" src="./assets/images/polvo-hornear128.png" alt="Ícono de polvo de hornear saliendo de una bolsa" width="auto" height="auto"></div> Polvo de hornear - 1 gramo</li>            
+            <li class="pan-ingredients__item">
+              <div class="pan-ingredients__icon-wrapper">
+                <picture>
+                  <source srcset="./assets/images/yuca128.png?as=webp" type="image/webp">
+                  <img class="pan-ingredients__icon" src="./assets/images/yuca128.png" alt="Ícono de una yuca partida a la mitad" width="auto" height="auto">
+                </picture>
+              </div> 
+            Almidón de yuca - 130 gramos</li>
+            <li class="pan-ingredients__item">
+              <div class="pan-ingredients__icon-wrapper">
+                <picture>
+                  <source srcset="./assets/images/maiz128.png?as=webp" type="image/webp">
+                  <img class="pan-ingredients__icon" src="./assets/images/maiz128.png" alt="Ícono de una caja de fécula de maíz" width="auto" height="auto">
+                </picture>
+              </div> 
+            Fécula de maíz - 32 gramos</li>
+            <li class="pan-ingredients__item">
+              <div class="pan-ingredients__icon-wrapper">
+                <picture>
+                  <source srcset="./assets/images/queso128.png?as=webp" type="image/webp">
+                  <img class="pan-ingredients__icon" src="./assets/images/queso128.png" alt="Ícono de un rallador de queso y una cuña de queso" width="auto" height="auto">
+                </picture>
+              </div> 
+            Queso costeño ** - 250 gramos</li>
+            <li class="pan-ingredients__item">
+              <div class="pan-ingredients__icon-wrapper">
+                <picture>
+                  <source srcset="./assets/images/huevo128.png?as=webp" type="image/webp">
+                  <img class="pan-ingredients__icon" src="./assets/images/huevo128.png" alt="Ícono de un huevo" width="auto" height="auto">
+                </picture>
+              </div> 
+              Huevo - 1 grande</li>
+            <li class="pan-ingredients__item">
+              <div class="pan-ingredients__icon-wrapper">
+                <picture>
+                  <source srcset="./assets/images/mantequilla128.png?as=webp" type="image/webp">
+                  <img class="pan-ingredients__icon" src="./assets/images/mantequilla128.png" alt="Ícono de un barra de mantequilla cortada en dos" width="auto" height="auto">
+                </picture>  
+              </div> 
+              Mantequilla - 2 cucharadas</li>
+            <li class="pan-ingredients__item">
+              <div class="pan-ingredients__icon-wrapper">
+                <picture>
+                  <source srcset="./assets/images/leche128.png?as=webp" type="image/webp">
+                  <img class="pan-ingredients__icon" src="./assets/images/leche128.png" alt="Ícono de una caja de leche con una vaca dibujada" width="auto" height="auto">
+                </picture>
+              </div> 
+              Leche - 45 mililítros</li>
+            <li class="pan-ingredients__item">
+              <div class="pan-ingredients__icon-wrapper">
+                <picture>
+                  <source srcset="./assets/images/azucar128.png?as=webp" type="image/webp">
+                  <img class="pan-ingredients__icon" src="./assets/images/azucar128.png" alt="Ícono de una bolsa de azúcar, que pone 'SUGAR' (azúcar en inglés)" width="auto" height="auto">
+                </picture>
+              </div> 
+              Azúcar - 24 gramos</li>
+            <li class="pan-ingredients__item">
+              <div class="pan-ingredients__icon-wrapper">
+                <picture>
+                  <source srcset="./assets/images/polvo-hornear128.png?as=webp" type="image/webp">
+                  <img class="pan-ingredients__icon" src="./assets/images/polvo-hornear128.png" alt="Ícono de polvo de hornear saliendo de una bolsa" width="auto" height="auto">
+                </picture>
+              </div> 
+            Polvo de hornear - 1 gramo</li>            
         </ul>
         <p class="pan-ingredients__footnote"> 
           **En España lo consigues como queso 'latino'.
@@ -56,13 +117,62 @@
         La receta es bastante sencilla. Necesitarás un horno, un tazón para mezclar, un rallador de queso, una bandeja de hornear. Esta es solo <a class="pan-recipe__link" href="https://www.eltiempo.com/cultura/pandebono-conozca-esta-receta-tipica-del-valle-749132">una de las miles de recetas</a> que hay.
       </p>
       <ol class="pan-recipe__steps">
-          <li class="pan-recipe__step">Precalienta el horno a 250° C. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/horno.jpg" alt="Fotografía de un horno con la puerta abierta."></div></li>
-          <li class="pan-recipe__step">Ralla el queso costeño. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/rallado.jpg" alt="Fotografía de frasco de vidrio lleno de queso rallado."></div></li>
-          <li class="pan-recipe__step">En un tazón aparte integra todos los ingredientes secos: el almidón de yuca, la harina de maíz, el azúcar y el polvo de hornear. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/secos.jpg" alt="Fotografía de un tazón de acero inoxidable que contiene harina. Dentro hay una cuchara medidora de acero inoxidable de 125ml a medio llenar."></div></li>
-          <li class="pan-recipe__step">Incorpora el queso, el huevo y la mantequilla y amasa. Añade la leche poco a poco hasta que la masa quede firme. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/tazon.jpg" alt="Fotografía de las manos de una persona amasando una mezcla de harina en un tazón de vidrio sobre una superficie de madera. Junto al tazón hay un rodillo de madera."></div></li>
-          <li class="pan-recipe__step">Haz bolas pequeñas, de unos 5cm, y ponlas en la bandeja para hornear. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/bollos.jpg" alt="Fotografía de una persona poniendo una bola de masa de 5cm en una bandeja para hornear vacía forrada con papel de hornear."></div></li>
-          <li class="pan-recipe__step">Hornea durante 25 minutos o hasta que los pandebonos estén dorados. <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/bandeja.jpg" alt="Fotografía de una persona poniendo una bola de masa de 5cm en una bandeja para hornear llena de bolas de masa forrada con papel de hornear."></div></li>
-          <li class="pan-recipe__step">Disfruta con tu bedida favorita. ¿Qué tal un café? <div class="pan-recipe__img-wrapper"><img class="pan-recipe__img" src="./assets/images/pandebono.jpg" alt="Una mano sostiene un amasijo horneado ya mordisqueado hecho de masa de almidón de yuca y queso."></div></li>
+          <li class="pan-recipe__step">Precalienta el horno a 250° C. 
+            <div class="pan-recipe__img-wrapper">
+              <picture>
+                <source srcset="./assets/images/horno.jpg?as=webp" type="image/webp">
+                <img class="pan-recipe__img" src="./assets/images/horno.jpg" alt="Fotografía de un horno con la puerta abierta.">
+              </picture>
+            </div>
+          </li>
+          <li class="pan-recipe__step">Ralla el queso costeño. 
+            <div class="pan-recipe__img-wrapper">
+              <picture>
+                <source srcset="./assets/images/rallado.jpg?as=webp" type="image/webp">
+                <img class="pan-recipe__img" src="./assets/images/rallado.jpg" alt="Fotografía de frasco de vidrio lleno de queso rallado.">
+              </picture>  
+            </div>
+          </li>
+          <li class="pan-recipe__step">En un tazón aparte integra todos los ingredientes secos: el almidón de yuca, la harina de maíz, el azúcar y el polvo de hornear. 
+            <div class="pan-recipe__img-wrapper">
+              <picture>
+                <source srcset="./assets/images/secos.jpg?as=webp" type="image/webp">
+                <img class="pan-recipe__img" src="./assets/images/secos.jpg" alt="Fotografía de un tazón de acero inoxidable que contiene harina. Dentro hay una cuchara medidora de acero inoxidable de 125ml a medio llenar.">
+              </picture>  
+            </div>
+          </li>
+          <li class="pan-recipe__step">Incorpora el queso, el huevo y la mantequilla y amasa. Añade la leche poco a poco hasta que la masa quede firme. 
+            <div class="pan-recipe__img-wrapper">
+              <picture>
+                <source srcset="./assets/images/tazon.jpg?as=webp" type="image/webp">
+                <img class="pan-recipe__img" src="./assets/images/tazon.jpg" alt="Fotografía de las manos de una persona amasando una mezcla de harina en un tazón de vidrio sobre una superficie de madera. Junto al tazón hay un rodillo de madera.">
+              </picture>
+            </div>
+          </li>
+          <li class="pan-recipe__step">Haz bolas pequeñas, de unos 5cm, y ponlas en la bandeja para hornear. 
+            <div class="pan-recipe__img-wrapper">
+              <picture>
+                <source srcset="./assets/images/bollos.jpg?as=webp" type="image/webp">
+                <img class="pan-recipe__img" src="./assets/images/bollos.jpg" alt="Fotografía de una persona poniendo una bola de masa de 5cm en una bandeja para hornear vacía forrada con papel de hornear.">
+              </picture>  
+            </div>
+          </li>
+          <li class="pan-recipe__step">Hornea durante 25 minutos o hasta que los pandebonos estén dorados. 
+            <div class="pan-recipe__img-wrapper">
+              <picture>
+                <source srcset="./assets/images/bandeja.jpg?as=webp" type="image/webp">
+                <img class="pan-recipe__img" src="./assets/images/bandeja.jpg" alt="Fotografía de una persona poniendo una bola de masa de 5cm en una bandeja para hornear llena de bolas de masa forrada con papel de hornear.">
+              </picture>
+            </div>
+          </li>
+          <li class="pan-recipe__step">Disfruta con tu bedida favorita. ¿Qué tal un café? 
+            <div class="pan-recipe__img-wrapper">
+              <picture>
+                <source srcset="./assets/images/pandebono.jpg?as=webp" type="image/webp">
+                <img class="pan-recipe__img" src="./assets/images/pandebono.jpg" alt="Una mano sostiene un amasijo horneado ya mordisqueado hecho de masa de almidón de yuca y queso.">
+              </picture>
+            </div>
+          </li>
       </ol>
       
       <p class="pan-recipe__text">
